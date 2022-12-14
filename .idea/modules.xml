@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Datenstroeme/Datenstroeme.iml" filepath="$PROJECT_DIR$/Datenstroeme/Datenstroeme.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lambda/Lambda.iml" filepath="$PROJECT_DIR$/Lambda/Lambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sortieren/Sortieren.iml" filepath="$PROJECT_DIR$/Sortieren/Sortieren.iml" />
       <module fileurl="file://$PROJECT_DIR$/pr2_git.iml" filepath="$PROJECT_DIR$/pr2_git.iml" />
     </modules>
   </component>
