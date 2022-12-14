@@ -4,4 +4,6 @@ public interface BinaryTreeInterface {
     public void addKnoten(Knoten k, Knoten p);
 
     public boolean pruefeBlatt(Knoten k);
+
+    public void preOrder(Knoten k);
 }

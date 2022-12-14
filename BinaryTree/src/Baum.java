@@ -1,12 +1,12 @@
-public class Baum implements BinaryTreeInterface{
+public class Baum implements BinaryTreeInterface {
 
     Knoten wurzel;
 
     @Override
     public void add(Knoten k) {
-        if(this.wurzel == null){
+        if (this.wurzel == null) {
             wurzel = k;
-        }else{
+        } else {
             addKnoten(k, wurzel);
         }
     }
@@ -16,16 +16,16 @@ public class Baum implements BinaryTreeInterface{
         Knoten links = p.getLinks();
         Knoten rechts = p.getRechts();
 
-        if(links.getInhalt() < k.getInhalt()){
-            if(!pruefeBlatt(links)){
+        if (links != null && links.getInhalt() < k.getInhalt()) {
+            if (pruefeBlatt(links)) {
                 links.setLinkenKnoten(k);
-            }else {
+            } else {
                 addKnoten(k, links);
             }
-        }else{
-            if(!pruefeBlatt(rechts)){
+        } else if(rechts != null){
+            if (pruefeBlatt(rechts)) {
                 rechts.setRechtenKnoten(k);
-            }else{
+            } else {
                 addKnoten(k, rechts);
             }
         }
@@ -34,6 +34,19 @@ public class Baum implements BinaryTreeInterface{
     @Override
     public boolean pruefeBlatt(Knoten k) {
         return k.getBlatt();
+    }
+
+    public void preOrder(){
+        preOrder(wurzel);
+    }
+
+    @Override
+    public void preOrder(Knoten k) {
+        System.out.println(k.getInhalt());
+        if (k.getLinks() != null)
+            preOrder(k.getLinks());
+        if (k.getRechts() != null)
+            preOrder(k.getRechts());
     }
 
 
